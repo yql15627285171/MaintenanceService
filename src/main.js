@@ -3,6 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// import vSelect from 'vue-select'
+
+
+// Vue.component('v-select', vSelect)
 
 Vue.config.productionTip = false
 
@@ -10,6 +14,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  // vSelect,
   template: '<App/>',
   components: { App }
 })
