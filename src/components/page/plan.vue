@@ -14,43 +14,19 @@
 </template>
 
 <script>
+
+
 export default{
 	name:'plan',
 	data(){
 		return{
-			list:[
-			{
-				label:'默认巡查方案',
-				name:'defaultPlan',
-				path:''
-			},
-			{
-				label:'定期巡检方案A',
-				name:'planA',
-				path:''
-			},
-			{
-				label:'定期巡检方案B',
-				name:'planB',
-				path:''
-			},
-			{
-				label:'定期巡检方案C',
-				name:'planC',
-				path:''
-			},
-			{
-				label:'临时执行方案',
-				name:'tempPlan',
-				path:''
-			},
-			{
-				label:'新增方案',
-				name:'newPlan',
-				path:''
-			},
-			]
+			list:this.$store.getters.getPlanList
 		}
+	},
+	mounted(){
+		// 网络请求，获取列表
+		// this.$store.getters.getPlanList添加数据
+		// 成功添加后，添加路由
 	}
 }
 </script>

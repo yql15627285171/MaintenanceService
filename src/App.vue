@@ -188,9 +188,11 @@ body {
 
 }
 
-.left .active,
-.left li:hover{
+.left .active{
   background: #00d5c3;
+}
+.left li:hover{
+  background: #369;
 }
 
 .right{
