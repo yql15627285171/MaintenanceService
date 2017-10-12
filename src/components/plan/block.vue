@@ -128,7 +128,7 @@ export default{
 
 .tree{
 	overflow: scroll;
-	height: 715px;
+	height: 750px;
 	background:rgba(0,0,0,0)
 }
 </style>

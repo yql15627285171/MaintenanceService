@@ -182,18 +182,15 @@ body {
 
 .left li{
   color: white;
-  margin: 10px 0;
-  padding: 10px 30px;
-  cursor: pointer;
 
 }
 
-.left .active{
+/* .left .active{
   background: #00d5c3;
-}
-.left li:hover{
+} */
+/* .left li:hover{
   background: #369;
-}
+} */
 
 .right{
   width: 1000px;

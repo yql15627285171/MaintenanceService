@@ -20,16 +20,22 @@ let store = new Vuex.Store({
 		planList:[
 		{
 			label:"新增方案",
-			name:"0"
+			name:"0",
+			// id:'0'
 		},
 		{
 			label:"默认巡查方案",
-			name:'1'
-		}]
+			name:'1',
+			// id:'1'
+		}],
+		planName:''
 	},
 	getters:{
 		getPlanList(state){
 			return state.planList
+		},
+		getPlanName(state){
+			return state.planName
 		}
 
 	},
@@ -46,6 +52,9 @@ let store = new Vuex.Store({
 					return;
 				}
 			});
+		},
+		setPlanName(state,name){
+			state.planName = name
 		}
 	},
 
@@ -57,10 +66,10 @@ let store = new Vuex.Store({
 		decreasePlan(context,plan){
 			context.commit('decreasePlan',plan)
 		},
-		setRouteName(context,name){
-			context.commit('setRouteName',name)
-		}
 
+		setPlanName(context,name){
+			context.commit('setPlanName',name)
+		}
 	}
 
 })

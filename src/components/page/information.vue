@@ -50,6 +50,15 @@ export default{
 }
 </script>
 
-<style>
-	
+<style scoped>
+.left .active{
+  background: #00d5c3;
+}
+.left li{
+  color: white;
+  margin: 10px 0;
+  padding: 10px 30px;
+  cursor: pointer;
+
+}
 </style>

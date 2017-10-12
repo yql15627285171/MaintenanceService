@@ -18,7 +18,7 @@
 		</el-col>
 		
 		<el-col :span="8" :offset="2">
-			
+
 			<div class="line">
 				<span>方案名字</span>
 				<el-input v-model="planName" placeholder="请输入内容" style="width:250px;"></el-input>
@@ -51,7 +51,7 @@
 </div>						
 </template>
 <script>
-
+import plan1 from './plan1'
 export default{
 	name:'newPlan',
 	data(){
@@ -149,7 +149,19 @@ export default{
 	            id: 8,
 	            label: '二级 3-2'
 	          }]
-	        }],
+	        }, {
+	          id: 2,
+	          label: '一级 2',
+	          children: [{
+	            id: 5,
+	            label: '二级 2-1'
+	          }, {
+	            id: 6,
+	            label: '二级 2-2'
+	          }]
+	        }
+
+	        ],
 	        defaultProps: {
 	          children: 'children',
 	          label: 'label'
@@ -164,24 +176,30 @@ export default{
 	methods:{
 		addPlan(){
 			if (this.planName.length > 0) {
-				// statement
-				// console.log(this.$route)
+				// 添加的方案名不能重复
 				
 				var index = this.$store.getters.getPlanList.length
+				// var index = 1
 
 				// 修改list
-				var plan = {label:this.planName,name:index.toString()}
-				this.$store.dispatch('addPlan',plan)
+				var plan = {
+					label:this.planName,
+					// name:index.toString()
+					name:'1'
+				}
 
+
+				this.$store.dispatch('addPlan',plan)
+				this.planName = ""
 
 					// 添加路由
-				// var comp = {
+				// const route = [{
 				// 	path:"/plan/"+index.toString(),
 				// 	name:index.toString(),
-				// 	component:defaultPlan
-				// }
-
-				// this.$router.options.routes[1].children.push(comp)
+				// 	component:plan1
+				// }]
+				// this.$router.addRoutes(route)
+				// this.$router.options.routes[1].children.addRoutes(route)
 				// console.log(this.$route)
 				// this.$router.addRoutes(comp)
 
