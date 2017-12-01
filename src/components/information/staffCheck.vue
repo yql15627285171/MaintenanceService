@@ -10,22 +10,25 @@
 				<input type="text" v-model.lazy="department" @change="selectChange">
 			</div>
 		</div>
-
-		<div class="table-list">
-			<table>
-				<tr>
-					<th v-for="head in tableHead">{{head.label}}</th>
-					<th>操作</th>
-				</tr>
-				<tr v-for="(item,index) in showData">
-					<td v-for="head in tableHead">{{item[head.key]}}</td>
-					<td>
-						<div class="sureBtn">通过</div>
-						<div class="cancelBtn">取消</div>
-					</td>
-				</tr>
-			</table>
-		</div>
+		<el-row>
+			<el-col :span='24'>
+				<div class="table-list">
+					<table>
+						<tr>
+							<th v-for="head in tableHead">{{head.label}}</th>
+							<th>操作</th>
+						</tr>
+						<tr v-for="(item,index) in showData">
+							<td v-for="head in tableHead">{{item[head.key]}}</td>
+							<td>
+								<div class="sureBtn">通过</div>
+								<div class="cancelBtn">取消</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</el-col>
+		</el-row>
 	</div>
 </template>
 <script>
@@ -126,11 +129,11 @@ export default{
 <style scoped>
 
 .all{
-	color: #fff;
+	/* color: #fff; */
 }
 
 .table-list {
-  width: 900px;
+  width: 90%;
   margin: 20px auto;
   /* color: #fff; */
 }
@@ -139,7 +142,7 @@ export default{
   width: 100%;
   /* background: #fff; */
   background: rgba(0, 0, 0, 0);
-  color: #fff;
+  /* color: #fff; */
 }
 
 .table-list td,

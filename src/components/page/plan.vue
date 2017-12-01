@@ -1,5 +1,5 @@
 <template>
-		<div class="wrap">
+		<div class="">
 		<div class="left">
 		
 			<ul>
@@ -74,7 +74,7 @@ export default{
 				// statements
 				if (element.label==this.oldCheck.name) {
 					// statement
-					array.splice(index, 1)
+					array.splice(index, 1)	
 					// 取消被点的
 					this.activeLi.splice(index, 1)
 					// 删除方案后返回第一个界面
@@ -96,7 +96,7 @@ export default{
 }
 .left a{
 	display: block;
-  color: white;
+  /* color: white; */
   margin: 10px 0;
   padding: 10px 30px;
   cursor: pointer;

@@ -13,7 +13,7 @@
 </script>
 <style scoped>
 .all{
-	color: white;
+	/* color: white; */
 	margin: 60px 0 0 200px;
 	
 }

@@ -6,13 +6,10 @@
 			<el-col :span="6" :offset='1'>
 				<div class="tree">
 				<el-tree
-	  			:data="dataTree"
-	  			show-checkbox
-	  			default-expand-all
-	  			node-key="id"
-	  			ref="tree"
-	  			:props="defaultProps"
-	  			style="background:rgba(0,0,0,0);color:#fff;border:none;">
+				  :data="dataTree"
+				  show-checkbox
+				  node-key="id"
+				  :props="defaultProps">
 				</el-tree>
 				</div>
 				
@@ -62,7 +59,6 @@ export default{
 	},
 	data(){
 		return{
-			planName:this.$store.getters.getPlanName,
 			freezeDate:"",
 			blockNumber:96,
 			// routeName:this.$route.name,
@@ -171,21 +167,9 @@ export default{
 	},
 
 	// activated(){
-	// 	// console.log(this.$route.params.item.name)
+	// 	this.check = ''
 	// },
-	mounted(){
-		// var index = parseInt(this.$route.name)
-		// var routeName = this.$route.name
 
-		// var temp = this.$store.getters.getPlanList.filter(function(element){
-		// 	return (routeName == element.name)
-		//  });
-
-		// this.planName = temp[0].label
-		// console.log(this.$route.params.item.name)
-		
-		// console.log('mounted')
-	},
 	methods:{
 		sureChange(){
 			this.$emit('change-name',this.check.name)
@@ -218,10 +202,10 @@ export default{
 
 <style scoped>
 .all{
-	color: #fff
+	/* color: #fff */
 }
 
- .el-row {
+/* .el-row {
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
@@ -234,11 +218,11 @@ export default{
   }
   .row-bg {
     padding: 10px 0;
-  }
+  }*/
 
 .line{
 	padding-bottom: 40px;
-	color: #fff;
+	/*color: #fff;*/
 }
 
 .line:last-child{
@@ -256,6 +240,7 @@ export default{
 .tree{
 	overflow: scroll;
 	height: 715px;
+	color: #000;
 	/* background:rgba(0,0,0,0) */
 }
 

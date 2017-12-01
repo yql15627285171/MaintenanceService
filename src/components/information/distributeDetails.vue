@@ -4,22 +4,26 @@
 			<span>服务公司</span>
 			<v-select v-model='selected' :options="company" class="select"></v-select>    
 		</div>
-		<div class="table-list">
-		<table>
-			<tr>
-				<th v-for="head in heads">{{head.label}}</th>
-				<th>操作</th>
-			</tr>
-			<template v-for="(item,itemIndex) in showData">
-				<tr v-for="(equip,equipIndex) in item.equips">
-					<td>{{item.company}}</td>
-					<td>{{equip}}</td>
-					<td><div class="deleteBtn" @click="removeRelation(itemIndex,equipIndex)">解除</div></td>
-				</tr>
-			</template>
-		</table>
-			
-		</div>
+		<el-row>
+			<el-col :span='24'>
+				<div class="table-list">
+				<table>
+					<tr>
+						<th v-for="head in heads">{{head.label}}</th>
+						<th>操作</th>
+					</tr>
+					<template v-for="(item,itemIndex) in showData">
+						<tr v-for="(equip,equipIndex) in item.equips">
+							<td>{{item.company}}</td>
+							<td>{{equip}}</td>
+							<td><div class="deleteBtn" @click="removeRelation(itemIndex,equipIndex)">解除</div></td>
+						</tr>
+					</template>
+				</table>
+				</div>
+			</el-col>
+		</el-row>
+
 	</div>
 </template>
 <script>
@@ -86,7 +90,7 @@ export default{
 	margin: 30px 80px;
 	display: flex;
 	align-items: center;
-	color: #fff;
+	/* color: #fff; */
 }
 
 .select{
@@ -95,7 +99,7 @@ export default{
 }
 
 .table-list {
-  width: 900px;
+  width: 90%;
   margin: 20px auto;
   /* color: #fff; */
 }
@@ -104,7 +108,7 @@ export default{
   width: 100%;
   /* background: #fff; */
   background: rgba(0, 0, 0, 0);
-  color: #fff;
+  /* color: #fff; */
 }
 
 .table-list td,

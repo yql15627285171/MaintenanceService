@@ -13,20 +13,24 @@
 		<div class="operation-add" @click="addDetails">增加</div>
 		<div class="operation-alert" @click="sureAlert">修改</div>
 	</div>
-	<div class="table-list">
-		<table>
-			<tr>
-				<th>序号</th>
-				<th v-for="head in tableHeads">{{head.label}}</th>
-				<th>操作</th>
-			</tr>
-			<tr v-for="(item,index) in details" @dblclick="alertDetails(index)">
-				<td>{{index+1}}</td>
-				<td v-for="head in tableHeads">{{item[head.key]}}</td>
-				<td><div class="operation-delete" @click="deleteItem(index)">删除</div></td>
-			</tr>
-		</table>
-	</div>
+	<el-row>
+		<el-col :span='24'>
+			<div class="table-list">
+				<table>
+					<tr>
+						<th>序号</th>
+						<th v-for="head in tableHeads">{{head.label}}</th>
+						<th>操作</th>
+					</tr>
+					<tr v-for="(item,index) in details" @dblclick="alertDetails(index)">
+						<td>{{index+1}}</td>
+						<td v-for="head in tableHeads">{{item[head.key]}}</td>
+						<td><div class="operation-delete" @click="deleteItem(index)">删除</div></td>
+					</tr>
+				</table>
+			</div>
+		</el-col>
+	</el-row>
 </div>
 </template>
 <script>
@@ -112,7 +116,7 @@ export default{
 .operation{
 	display: flex;
 	align-items: center;
-	color: white;
+	/* color: white; */
 	margin: 30px;
 	justify-content: center
 }
@@ -130,9 +134,9 @@ export default{
 input{
 	width: 200px;
 	height: 18px;
-	margin-left: 5px;
-	-webkit-appearance: none;
-	border-image: none;
+	/* margin-left: 5px; */
+	/* -webkit-appearance: none; */
+	/* border-image: none; */
 }
 
 .operation-add,
@@ -158,9 +162,9 @@ input{
 }
 
 .table-list {
-  width: 900px;
+  width: 95%;
   margin: 20px auto;
-  color: white;
+  /* color: white; */
 }
 
 .table-list table {

@@ -5,13 +5,10 @@
 		<el-col :span="6" :offset='1'>
 			<div class="tree">
 			<el-tree
-  			:data="dataTree"
-  			show-checkbox
-  			default-expand-all
-  			node-key="id"
-  			ref="tree"
-  			:props="defaultProps"
-  			style="background:rgba(0,0,0,0);color:#fff;border:none;">
+			  :data="dataTree"
+			  show-checkbox
+			  node-key="id"
+			  :props="defaultProps">
 			</el-tree>
 			</div>
 			
@@ -178,34 +175,19 @@ export default{
 			if (this.planName.length > 0) {
 				// 添加的方案名不能重复
 				
-				var index = this.$store.getters.getPlanList.length
-				// var index = 1
+				// var index = this.$store.getters.getPlanList.length
 
-				// 修改list
-				var plan = {
-					label:this.planName,
-					// name:index.toString()
-					name:'1'
-				}
+				// // 修改list
+				// var plan = {
+				// 	label:this.planName,
+					
+				// 	name:'1'
+				// }
 
 
-				this.$store.dispatch('addPlan',plan)
+				// this.$store.dispatch('addPlan',plan)
+				this.$emit('add-plan',this.planName)
 				this.planName = ""
-
-					// 添加路由
-				// const route = [{
-				// 	path:"/plan/"+index.toString(),
-				// 	name:index.toString(),
-				// 	component:plan1
-				// }]
-				// this.$router.addRoutes(route)
-				// this.$router.options.routes[1].children.addRoutes(route)
-				// console.log(this.$route)
-				// this.$router.addRoutes(comp)
-
- 				
-
-
 
 			}
 		}	
@@ -215,10 +197,10 @@ export default{
 
 <style scoped>
 	.all{
-	color: #fff
+	/* color: #fff */
 }
 
- .el-row {
+/* .el-row {
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
@@ -231,7 +213,7 @@ export default{
   }
   .row-bg {
     padding: 10px 0;
-  }
+  }*/
 
 .line{
 	padding-bottom: 40px;
@@ -247,12 +229,14 @@ export default{
 
 .line span{
 	margin-right: 10px;
+	/*color: #000;*/
 }
 
 .tree{
-	overflow: scroll;
-	height: 715px;
-	background:rgba(0,0,0,0)
+	overflow: auto;
+	height: 700px;
+	color: #000;
+	/*background:rgba(0,0,0,0)*/
 }
 
 .alertInfo{

@@ -133,7 +133,7 @@ export default{
 </script>
 <style scoped>
 #meterMap{
-	height: 700px;
+	height: 750px;
 }
 
 

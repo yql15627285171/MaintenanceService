@@ -29,6 +29,7 @@ import nowServicePlace from '../components/statistics/nowServicePlace'
 import nowWorking from '../components/statistics/nowWorking'
 import troubleArea from '../components/statistics/troubleArea'
 import troubleType from '../components/statistics/troubleType'
+import checkPath from '../components/statistics/checkPath'
 
 
 
@@ -40,136 +41,82 @@ export default new Router({
   routes: [
   {
     path:'/',
-    redirect:'/plan'
-  },
-  {
-    path:'/plan',
-    name:"plan",
-    component:planPage,
-    redirect:'/plan/0',
-    children:[
-     {
-      path:'/plan/0',
-      name:'0',
-      component:newPlan
-    },
-    {
-      path:'/plan/1',
-      name:'1',
-      component:plan1
-    },
-    // {
-    //   path:'/plan/2',
-    //   name:'2',
-    //   component:plan1
-    // },
-    // {
-    //   path:'/plan/3',
-    //   name:'3',
-    //   component:plan1
-    // },
-    // {
-    //   path:'/plan/4',
-    //   name:'4',
-    //   component:plan1
-    // },
-    // {
-    //   path:'/plan/5',
-    //   name:'5',
-    //   component:plan1
-    // },
-    // {
-    //   path:'/plan/6',
-    //   name:'6',
-    //   component:plan1
-    // },
-    // {
-    //   path:'/plan/7',
-    //   name:'7',
-    //   component:plan1
-    // },
-    // {
-    //   path:'/plan/8',
-    //   name:'8',
-    //   component:plan1
-    // },
-    // {
-    //   path:'/plan/9',
-    //   name:'9',
-    //   component:plan1
-    // },
-    // {
-    //   path:'/plan/10',
-    //   name:'10',
-    //   component:plan1
-    // }
-    ]
+    redirect:'/plan/0'
   },
 
   {
-  	path:'/information',
-  	name:"information",
-  	component:informationPage,
-    redirect:'/information/companyManager',
-    children:[
-    {
-      path:'/information/companyManager',
-      name:'companyManager',
-      component:companyManager
-    },
-    {
-      path:'/information/equipAcceptance',
-      name:'equipAcceptance',
-      component:equipAcceptance
-    },
-    {
-      path:'/information/equipDistribute',
-      name:'equipDistribute',
-      component:equipDistribute
-    },
-    {
-      path:'/information/distributeDetails',
-      name:'distributeDetails',
-      component:distributeDetails
-    },
-    {
-      path:'/information/staffCheck',
-      name:'staffCheck',
-      component:staffCheck
-    },]
+    path:'/plan/0',
+    name:'0',
+    component:newPlan
+  },
+  {
+    path:'/plan/1',
+    name:'1',
+    component:plan1
+  },
+
+
+
+  {
+    path:'/information/companyManager',
+    name:'companyManager',
+    component:companyManager
+  },
+  {
+    path:'/information/equipAcceptance',
+    name:'equipAcceptance',
+    component:equipAcceptance
+  },
+  {
+    path:'/information/equipDistribute',
+    name:'equipDistribute',
+    component:equipDistribute
+  },
+  {
+    path:'/information/distributeDetails',
+    name:'distributeDetails',
+    component:distributeDetails
+  },
+  {
+    path:'/information/staffCheck',
+    name:'staffCheck',
+    component:staffCheck
+  },
+ 
+  
+
+  {
+    path:'/statistics/meterArea',
+    name:'meterArea',
+    component:meterArea
+  },
+  {
+    path:'/statistics/nowServicePlace',
+    name:'nowServicePlace',
+    component:nowServicePlace
+  },
+  {
+    path:'/statistics/nowWorking',
+    name:'nowWorking',
+    component:nowWorking
+  },
+  {
+    path:'/statistics/troubleArea',
+    name:'troubleArea',
+    component:troubleArea
+  },
+  {
+    path:'/statistics/troubleType',
+    name:'troubleType',
+    component:troubleType
+  },
+  {
+    path:'/statistics/checkPath',
+    name:'checkPath',
+    component:checkPath
   },
   
-  {
-  	path:'/statistics',
-  	name:"statistics",
-  	component:statisticsPage,
-    redirect:'/statistics/meterArea',
-    children:[
-    {
-      path:'/statistics/meterArea',
-      name:'meterArea',
-      component:meterArea
-    },
-    {
-      path:'/statistics/nowServicePlace',
-      name:'nowServicePlace',
-      component:nowServicePlace
-    },
-    {
-      path:'/statistics/nowWorking',
-      name:'nowWorking',
-      component:nowWorking
-    },
-    {
-      path:'/statistics/troubleArea',
-      name:'troubleArea',
-      component:troubleArea
-    },
-    {
-      path:'/statistics/troubleType',
-      name:'troubleType',
-      component:troubleType
-    },]
-  }
   ]
+
+  
 })

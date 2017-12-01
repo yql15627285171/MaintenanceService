@@ -1,5 +1,5 @@
 <template>
-	<div class="wrap">
+	<div class="">
 		<div class="left">
 			<ul>
 				<router-link v-for="item in list" :to="{name:item.name}" tag="li" active-class="active">{{item.label}}</router-link>
@@ -51,11 +51,14 @@ export default{
 </script>
 
 <style scoped>
+
+
+
 .left .active{
   background: #00d5c3;
 }
 .left li{
-  color: white;
+  /* color: white; */
   margin: 10px 0;
   padding: 10px 30px;
   cursor: pointer;

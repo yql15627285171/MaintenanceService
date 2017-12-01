@@ -75,11 +75,11 @@ export default{
 h3{
 	padding:10px 60px;
 	background: #00d5c3;
-	color: #fff;
+	/* color: #fff; */
 }
 .match{
 	margin: 30px 0 0 100px;
-	color: #fff;
+	/* color: #fff; */
 }
 
 .selectConpany,
@@ -108,7 +108,7 @@ span{
 
 .notselect,
 .company{
-	background: #fff;
+	/* background: #fff; */
 	margin-left: 20px;
 }
 

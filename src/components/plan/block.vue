@@ -10,7 +10,7 @@
 	  			node-key="id"
 	  			ref="tree"
 	  			:props="defaultProps"
-	  			style="background:rgba(0,0,0,0);color:#fff;border:none;">
+	  			style="background:rgba(0,0,0,0);border:none;">
 				</el-tree>
 				</div>
 				
@@ -92,7 +92,7 @@ export default{
 </script>
 <style scoped>
 .all{
-	color: #fff
+	/* color: #fff */
 }
 
  .el-row {
@@ -129,6 +129,7 @@ export default{
 .tree{
 	overflow: scroll;
 	height: 750px;
+	color: #000;
 	background:rgba(0,0,0,0)
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div class="wrap">
+	<div class="">
 		<div class="left">
 			<ul>
 				<router-link v-for="item in list" :to="{name:item.name}" tag="li" active-class="active">{{item.label}}</router-link>
@@ -39,6 +39,10 @@ export default{
 				label:"故障分布统计",
 				name:"troubleArea",
 			},
+			{
+				label:"巡检途径",
+				name:"checkPath",
+			}
 			]
 		}
 	}
@@ -50,7 +54,7 @@ export default{
   background: #00d5c3;
 }
 .left li{
-  color: white;
+  /* color: white; */
   margin: 10px 0;
   padding: 10px 30px;
   cursor: pointer;
